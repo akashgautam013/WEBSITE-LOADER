@@ -1,0 +1,78 @@
+/* Background color for the body element */
+body {
+    background-color: #121210;
+}
+/* Defining the class 'circle' */
+.circle{
+    /* Setting the width and height of the circle */
+    width: 280px;
+    height: 280px;
+    display: flex;
+    margin-left: 45%;
+    margin-top: 15%;
+    /* Setting the background color using conic-gradient */
+    background: 
+        conic-gradient(from 0deg at 50%
+        50%,
+        #6f7bf7 0%,
+        #9bf7f4 50%,
+        #101012 50%);
+        /* Centering the content */
+        display: grid;
+        place-content: center;
+        /* Centering the content */
+        justify-content: center;
+        align-items: center;
+        /* Rounding the corners to create a circle */
+        border-radius: 200px;
+        /* Adding shadows to create depth */
+        box-shadow:
+            4px 4px 16px #000000bf,
+            -4px -4px 16px #ffffff1a;
+            /* Animating the circle to spin */
+            animation: spin 1s infinite linear;
+            /* Positioning the circle relative to its container */
+            position: relative;
+}
+/* Define the animation keyframes */
+@keyframes spin {
+    /* Set the initial state */
+    0% {
+        /* Apply a rotation of 0 degrees */
+        transform: rotate(0deg);
+    }
+    /* Set the final state */
+    100% {
+        /* Apply a rotation of 360 degrees */
+        transform: rotate(360deg);
+    }
+}
+/* Creating a circle with shadow effects */
+.count{
+    content: ""; /* Resetting content */
+    width: 274px; /* Setting width */
+    height: 274px; /* Setting height */
+    background: #1d1e22; /* Setting background color */
+    position: absolute; /* Positioning element */
+    top: 3px; /* Positioning from top */
+    left: 3px; /* Positioning from left */
+    margin: 0; /* Resetting margin */
+    display: flex; /* Making it a flex container */
+    justify-content: center; /* Centering content horizontally */
+    align-items: center; /* Centering content vertically */
+    border-radius: 200px; /* Making it a circle */
+    box-shadow: 
+        4px 4px 16px #000000bf inset, /* Inner shadow */
+        -4px -4px 16px #ffffff1a inset; /* Outer shadow */
+        animation: spin 1s infinite linear reverse; /* Animation */
+}
+/* Font family for the percent class */
+.percent{
+    font-family: sans-serif;
+
+    /* Font size for the percent class */
+    font-size: 7em;
+
+    /* Color for the percent class */
+    color: rgb(250, 247, 220);
+}
